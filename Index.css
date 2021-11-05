@@ -1,0 +1,351 @@
+*
+{
+    margin: 0;
+}
+
+body,footer
+{
+    font-family: 'Roboto','Shrikhand',"Arial Black";
+}
+                          /* Bloc de présentation*/                       
+.logo 
+{
+    display: flex;
+    justify-content: center;
+    block-size: 60px;
+    margin-bottom: 20px;
+}
+.présentation
+{
+    font-family: 'Roboto','Shrikhand',impact;
+    height: 260px;
+    background-color: #ebebeb;
+}
+.endroit
+{
+    background-color: gainsboro;
+    display: inline-flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.marker
+{
+    display: inline-flex;
+    align-items: center;
+    background-color: gainsboro;
+    height: 32px;
+    padding-left: 80px;
+    padding-right: 10px;
+
+}
+.localisation 
+{
+    height: 30px;
+    background-color: gainsboro;
+    border: none;
+}
+.accroche1 
+{
+    display: inline-flex;
+    text-align: center;
+    margin-bottom: 0;
+    margin-left: 20px;   
+}
+.accroche2
+{
+    display: inline-flex;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.explo
+{
+    height: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    border:2px solid #b318f0;
+    border-radius: 25px;
+    background-color:#c83bff;
+    box-shadow: 0 1px inset violet;
+    color: white;
+}
+.explolien
+{
+    text-decoration: none;
+    color: white;
+}
+                          /* Bloc de fonctionnement*/
+#fonction
+{
+    padding: 10px;
+    margin-bottom: 50px;
+}                           
+.choix,.composition,.surplace
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    font-family: 'Roboto','Shrikhand',impact;
+    font-weight:bold;
+    background-color: #ebebeb;
+    border: 2px solid #ebebeb;
+    border-radius: 20px;
+    box-shadow: 3px 2px 3px grey;
+    margin-bottom: 20px;
+    position: relative;
+}
+.notif  /* points de côté*/
+{
+    position: absolute;
+    left: -10px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    border: 1px solid #c83bff;
+    border-radius: 25px;
+    color: white;
+    background-color: #c83bff;
+}
+h2 /*titres de blocs*/
+{    
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.iconecolorée
+{
+    width: 30px;
+    height: 20px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #c83bff;
+
+}
+.icone
+{
+    width: 30px;
+    height: 20px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+                          /* Bloc des restaurants*/
+.palette,.note,.french,.délice
+{
+    text-align: left;
+    height: 230px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 3px 2px 3px grey;
+    margin-bottom: 20px;
+    background-color: white;  
+}
+.palette p,.note p,.french p,.délice p
+{
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 0;
+    position: relative;
+}
+.palette,.note
+{
+    position: relative;
+}
+.nouveauté /* signalement d'un nouveau plat*/
+{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    height: 40px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #99e2d0;
+    border-radius: 5px;
+    color: darkolivegreen;
+    background-color: #99e2d0;
+}
+.pal,.del,.not,.fr /* coeur*/
+{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: inline-flex;
+    font-size: 25px;
+    justify-content: flex-end;
+}
+#resto
+{
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+#resto img
+{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+a
+{
+    color: black;
+    text-decoration:none;
+}
+.final
+{
+    font-family:'Shrikhand',Impact,Arial;
+    font-size: 1.2em;
+}
+.fin
+{
+    font-family:'Roboto', impact,Arial;
+    display: block;
+    padding-left: 20px;
+    color:white;
+    background-color: #3c3a3a;
+    border: 2px solid #3c3a3a;
+}
+.fin p
+{
+    margin: 15px;
+}
+.fin i
+{ 
+    display: inline-block;
+    margin-right: 10px;
+}
+.fin a /* liens du footer*/
+{
+    color: white;    
+}
+                         /*responsive mobile*/
+@media screen and (min-width:600px) 
+{    
+  .accroche1,.accroche2{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+  .explo{
+      margin-left: 0;
+      margin-right: 0;
+      width: 30%;
+      margin: auto;
+  }
+  h2{
+      display: flex;
+      justify-content: center;
+  }
+  .finish{
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+  }
+} /* responsive tablette*/
+@media screen and (min-width:690px) 
+{
+    .explo{
+        width: 30%;
+        margin-top: 30px;
+    }
+    .titre{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .choix,.composition,.surplace{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .palette,.note,.délice,.french{
+        display:grid;
+        width: 40%;
+        height: 200px;
+      }
+    #resto img{
+          object-fit: cover;
+          height: 150px;
+      }
+    #resto{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border-radius: 20px;
+        margin-bottom: 50px;   
+      }
+}
+@media screen and (min-width:1024px) 
+{
+    .présentation{
+        margin: 50px;
+        background-color: white;  
+    }
+    .endroit{
+        background-color: white;
+    }
+    .explo{
+        width: 20%;
+        margin-top: 30px;
+    }
+    #fonction{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: whitesmoke;
+        border: 3px dashed whitesmoke;
+        border-radius: 100px;
+        box-shadow: 0 6px 20px #c83bff;
+    }
+    .choix,.composition,.surplace{
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .notif{
+        left: -18px;
+    }
+    .titre{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #resto{
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+    #resto img{
+        height: 190px;
+    }
+    .palette,.note,.french,.délice{
+        display:grid;
+        width: 40%;
+        height: 250px;
+    }
+}
