@@ -75,6 +75,13 @@ body,footer
     background-color:#c83bff;
     box-shadow: 0 1px inset violet;
     color: white;
+    transition: transform 400ms;
+}
+.explo:hover
+{
+    transform: scale(1.15);
+
+
 }
 .explolien
 {
