@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+}
+body,footer
+{
+    font-family: 'Roboto','Shrikhand',"Arial Black";
+}
+.logo img
+{ 
+    block-size: 30px;
+}
+.fleche
+{
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+    margin-right: 30px;
+}
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+h1{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shrikhand';
+}
+.entrées div, .plats div, .desserts div  /*réglages des divs*/ 
+{ 
+    border: 2px solid gray;
+    border-radius:10px;
+    margin: 10px;
+    height: 70px;
+}
+.entrées,.plats,.desserts
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container{
+    border: 2px solid gray;
+    border-radius: 30px 30px 0 0;
+    background-color: rgb(224, 224, 224);
+}
