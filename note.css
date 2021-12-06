@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 body,footer
 {
@@ -20,10 +21,6 @@ body,footer
     position: absolute;
     left: 10px;
 }
-.fleche a{
-    color: black;
-    cursor: pointer;
-}
 .logo
 {
     display: flex;
@@ -33,8 +30,13 @@ body,footer
     margin-bottom: 20px;
     position: relative;
 }
+.fleche a{
+    color: black;
+    cursor: pointer;
+}
 
-h1{
+h1
+{
     height: 50px;
     display: flex;
     justify-content: center;
@@ -64,39 +66,6 @@ h1{
     background: linear-gradient(bottom #9356d6 top #ff79da);
     transform:  scale(1.1);
 }
-.frica,.foie,.oeuf,.filb,.parmen,.filt,.paris,.maca,.mousse
-{
-    display: block;
-    height: 70px;
-    padding: 5px;
-    background-color: white;
-    border: 1px solid black;
-    box-shadow: 3px 2px 3px black ;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-.frica:hover,.foie:hover,.oeuf:hover,.filb:hover,.parmen:hover,.filt:hover,.paris:hover,.maca:hover,.mousse:hover
-{
-    cursor: pointer;
-    transform: scaleY(1) translateX(-10px);
-}
-.prix
-{
-    display: block;
-    text-align: end;
-}/*
-.valid span
-{
-    width: 30px;
-    height: 20px;
-    display: flex;
-    border:1px solid black;
-}
-.valid
-{
-    width: 100%;
-    display: flexbox;
-}*/
 h2{
     display: block;
     font-weight: 300;
@@ -115,6 +84,27 @@ h2{
 {
     margin-left: 10px;
     margin-right: 10px;
+}
+.ravi,.cavi,.homa,.foie,.noix,.langous,.mijo,.maca,.baba,.tarte
+{
+    display: block;
+    height: 70px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 3px 2px 3px black ;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.ravi:hover,.cavi:hover,.homa:hover,.foie:hover,.noix:hover,.langous:hover,.mijo:hover,.maca:hover,.baba:hover,.tarte:hover
+{
+    cursor: pointer;
+    transform: scaleY(1) translateX(-10px);
+}
+.prix
+{
+    display: block;
+    text-align: end;
 }
 .container{
     border: 2px solid gray;

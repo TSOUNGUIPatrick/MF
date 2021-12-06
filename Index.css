@@ -2,7 +2,6 @@
 {
     margin: 0;
 }
-
 body,footer
 {
     font-family: 'Roboto','Shrikhand',"Arial Black";
@@ -189,14 +188,22 @@ h2 /*titres de blocs*/
     color: darkolivegreen;
     background-color: #99e2d0;
 }
-.pal,.del,.not,.fr /* coeur*/
+.pal,.del,.not,.fr /* coeurs*/
 {
     position: absolute;
     right: 10px;
     bottom: 10px;
     display: inline-flex;
-    font-size: 25px;
+    font-size: 35px;
     justify-content: flex-end;
+}
+
+.pal:hover,.del:hover,.not:hover,.fr:hover
+{
+    display: block;
+    
+    background-color: #9356d6,#ff79da;
+    transition: background-color 300ms 0s ease-in-out both;
 } 
 #resto
 {
@@ -248,15 +255,29 @@ a
 .load   /* le loader*/
 {
     width: 100%;
-    height: 100px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
+    top: 0;
+    color: blueviolet;
+    background-color: #08040af2;
     font-family: 'Shrikhand';
-    animation: load 5s 200ms linear both infinite;
+    animation: load 6s 150ms ease-in-out both ;
 }
-   
+@keyframes background-color {
+    0%{
+        transform: rotateY(90deg);
+        opacity: 1;
+        z-index: 1;
+        
+    }
+    100%{
+        opacity: 0;
+        overflow: hidden;
+    }
+}  
 .l1 /*body du loader*/
 {
     width: 50px;
