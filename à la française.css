@@ -10,6 +10,15 @@ body,footer
 { 
     block-size: 40px;
 }
+body
+{
+  background: url("images/restaurants/à\ la\ française.png") no-repeat 0px 80px;
+  background-size: contain; 
+}
+.photo
+{
+    height: 200px;
+}
 .fleche
 {
     width: 20%;
@@ -30,7 +39,8 @@ body,footer
     margin-bottom: 20px;
     position: relative;
 }
-.fleche a{
+.fleche a
+{
     color: black;
     cursor: pointer;
 }
@@ -91,8 +101,8 @@ h2{
     height: 70px;
     padding: 5px;
     background-color: white;
-    border: 1px solid black;
-    box-shadow: 3px 2px 3px black ;
+    border: 1px solid #f5f5f5;
+    box-shadow: 3px 2px 3px #bdbdbd ;
     border-radius: 15px;
     margin-bottom: 20px;
 }
@@ -101,15 +111,20 @@ h2{
     cursor: pointer;
     transform: scaleY(1) translateX(-10px);
 }
+.inté
+{
+    display: flex;
+    justify-content: space-between;
+}
 .prix
 {
     display: block;
     text-align: end;
 }
 .container{
-    border: 2px solid gray;
+    border: 2px solid #eeeeee;
     border-radius: 30px 30px 0 0;
-    background-color: rgb(224, 224, 224);
+    background-color:#eeeeee;
 }
 .btn
 {

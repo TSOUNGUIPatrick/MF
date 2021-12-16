@@ -30,6 +30,16 @@ body,footer
     margin-bottom: 20px;
     position: relative;
 }
+body /* image de fond*/
+{
+    background: url("images/restaurants/délice.png") no-repeat 0px 80px;
+    background-size: contain;
+}
+.photo
+{
+    height: 200px;
+}
+
 .fleche a{
     color: black;
     cursor: pointer;
@@ -100,6 +110,11 @@ h2{
 {
     cursor: pointer;
     transform: scaleY(1) translateX(-10px);
+}
+.inté
+{
+    display: flex;
+    justify-content: space-between;
 }
 .prix
 {

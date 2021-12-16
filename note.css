@@ -101,6 +101,11 @@ h2{
     cursor: pointer;
     transform: scaleY(1) translateX(-10px);
 }
+.inté
+{
+    display: flex;
+    justify-content: space-between;
+}
 .prix
 {
     display: block;
