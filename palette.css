@@ -6,10 +6,10 @@ body,footer
 {
     font-family: 'Roboto','Shrikhand',"Arial Black";
 }
-body
+.photo
 {
-    background: url("images/restaurants/palette.png") no-repeat 0px 80px;
-    background-size: contain;
+    background: url("images/restaurants/palette.png");
+    background-size: cover;
 }
 .photo
 {
@@ -85,6 +85,10 @@ h1{
     margin-bottom: 30px;
     animation: frica 2500ms 150ms ease both; 
 }
+.frica,.filb,.paris
+{
+    animation: frica 2500ms 150ms ease both;
+}
 @keyframes frica
 {
     0%
@@ -135,8 +139,6 @@ h1{
 .frica i:hover
 {
     transform: translateX(-10px);
-    transition:transform 1s linear;
-    visibility: inherit;
 }
 
 h2{

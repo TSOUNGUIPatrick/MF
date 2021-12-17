@@ -259,11 +259,12 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     color: blueviolet;
     background-color: #08040af2;
     font-family: 'Shrikhand';
+    visibility: hidden;
     /* animation: load 6s 150ms ease-in-out both; */
 }
 @keyframes background-color {
