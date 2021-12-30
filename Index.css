@@ -72,9 +72,9 @@ body,footer
     border:1px solid darkviolet;
     border-radius: 25px;
     background: linear-gradient(#9356d6,#ff79da);
-    box-shadow: 0 1px  violet;
+    box-shadow: 0 4px 8px 2px #80808099;
     color: white;
-    transition: transform 200ms ease-in-out;
+    transition: transform 2s;
 }
 .explo:hover
 {
@@ -103,7 +103,7 @@ body,footer
     background-color: #ebebeb;
     border: 2px solid #ebebeb;
     border-radius: 20px;
-    box-shadow: 3px 2px 3px grey;
+    box-shadow: 0px 4px 8px 2px #80808099;
     margin-bottom: 20px;
     position: relative;
 }
@@ -111,9 +111,9 @@ body,footer
 {
     transform: scale(1.2);
     cursor: pointer;
-    box-shadow: 2px 6px 2px grey;
+    box-shadow: 0px 4px 8px 2px grey;
     transition: all 100ms 0s ease-in-out;
-    color:#c83bff;
+    color:#9356d6;
 }
 .notif  /* points de côté*/
 {
@@ -152,14 +152,14 @@ h2 /*titres de blocs*/
     height: 230px;
     border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 3px 2px 3px #90a4ae;
+    box-shadow: 0px 4px 8px 2px #80808099;
     margin-bottom: 20px;
     background-color: white;  
 }
 .palette:hover,.note:hover,.french:hover,.délice:hover
 {
     transform: scale(1.1);
-    box-shadow: 3px 6px 3px #90a4ae;
+    box-shadow: 0px 4px 8px 2px grey;
 }
 .palette p,.note p,.french p,.délice p
 {
@@ -187,23 +187,37 @@ h2 /*titres de blocs*/
     color: darkolivegreen;
     background-color: #99e2d0;
 }
-.pal,.del,.not,.fr /* coeurs*/
+.coeur /* coeurs*/
 {
     position: absolute;
     right: 10px;
     bottom: 10px;
-    display: inline-flex;
-    font-size: 35px;
-    justify-content: flex-end;
+    font-size: 25px;
+}
+.coeur i 
+{
+    position: relative;
 }
 
-.pal:hover,.del:hover,.not:hover,.fr:hover
+.coeur .far
+{   
+    left: 31px;
+}
+.coeur .fas
 {
-    display: block;
-    
-    background-color: #9356d6,#ff79da;
-    transition: background-color 300ms 0s ease-in-out both;
-} 
+    position: relative;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(#9356d6,#ff79da);
+    opacity: 0;
+}
+.coeur:hover .fas
+{
+    opacity: 1;
+    transition: opacity 2s;
+}
+ 
 #resto
 {
     border: 2px solid #f2f2f2;
@@ -263,9 +277,9 @@ a
     color: blueviolet;
     background-color: #08040af2;
     font-family: 'Shrikhand';
-    animation: background-color 3000ms 1500ms linear both;
+    animation: fondu 3000ms 2500ms linear both;
 }
-@keyframes background-color
+@keyframes fondu
 {
     0%{
         opacity: 1;
@@ -273,7 +287,6 @@ a
     }
 
     50%{
-        z-index: 0;
         opacity: 0.5;
     }
     100%{
@@ -331,7 +344,6 @@ a
     }
     to {
         transform: translateX(2) scale(1) ;
-        overflow: hidden;
     }
 }
 @keyframes l2 {

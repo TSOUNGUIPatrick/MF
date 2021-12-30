@@ -78,20 +78,11 @@ h1{
 .coeur .fas
 {
     opacity:0;
-   /* z-index: -1;*/
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     background-image: -webkit-linear-gradient(#9356d6,#ff79da);
-}/*
-.coeur .fas::before
-{
-    opacity: 1;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: -webkit-linear-gradient(#9356d6,#ff79da);  
-}*/
+}
 .coeur:hover .fas
 {
     opacity: 1;
