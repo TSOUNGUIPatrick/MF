@@ -75,32 +75,29 @@ h1{
     cursor: pointer;
 }
 
-.coeur .far:hover
-{
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: -webkit-linear-gradient(#9356d6,#ff79da);
-
-}
 .coeur .fas
 {
     opacity:0;
-    z-index: -1;
+   /* z-index: -1;*/
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     background-image: -webkit-linear-gradient(#9356d6,#ff79da);
-}
+}/*
 .coeur .fas::before
 {
     opacity: 1;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: -webkit-linear-gradient(#9356d6,#ff79da);    
+    background-image: -webkit-linear-gradient(#9356d6,#ff79da);  
+}*/
+.coeur:hover .fas
+{
+    opacity: 1;
+    transition:  opacity 2s;
 }
-@keyframes opacity 
+@keyframes monte 
 {
     0%{
         transform: translateY(-1);
