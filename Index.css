@@ -69,10 +69,10 @@ body,footer
     align-items: center;
     margin-left: 70px;
     margin-right: 70px;
-    border:2px solid #b318f0;
+    border:1px solid darkviolet;
     border-radius: 25px;
-    background-color:#c83bff;
-    box-shadow: 0 1px inset violet;
+    background: linear-gradient(#9356d6,#ff79da);
+    box-shadow: 0 1px  violet;
     color: white;
     transition: transform 200ms ease-in-out;
 }
@@ -112,7 +112,7 @@ body,footer
     transform: scale(1.2);
     cursor: pointer;
     box-shadow: 2px 6px 2px grey;
-    transition: all 200ms ease-in-out;
+    transition: all 100ms 0s ease-in-out;
     color:#c83bff;
 }
 .notif  /* points de côté*/
@@ -152,15 +152,14 @@ h2 /*titres de blocs*/
     height: 230px;
     border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 3px 2px 3px rgb(128, 128, 128);
+    box-shadow: 3px 2px 3px #90a4ae;
     margin-bottom: 20px;
     background-color: white;  
 }
 .palette:hover,.note:hover,.french:hover,.délice:hover
 {
     transform: scale(1.1);
-    box-shadow: 3px 6px 3px rgba(38, 6, 43, 0.596);
-    transition: transform 200ms ease-in-out;
+    box-shadow: 3px 6px 3px #90a4ae;
 }
 .palette p,.note p,.french p,.délice p
 {
@@ -264,22 +263,26 @@ a
     color: blueviolet;
     background-color: #08040af2;
     font-family: 'Shrikhand';
-    visibility: hidden;
-    /* animation: load 6s 150ms ease-in-out both; */
+    animation: background-color 3000ms 1500ms linear both;
 }
-@keyframes background-color {
+@keyframes background-color
+{
     0%{
-        transform: rotateY(90deg);
         opacity: 1;
-        z-index: 1;
-        
+        z-index: 1;    
+    }
+
+    50%{
+        z-index: 0;
+        opacity: 0.5;
     }
     100%{
         opacity: 0;
         overflow: hidden;
+        z-index: -1;
     }
 }  
-.l1 /*loader du body*/
+.l1 
 {
     width: 50px;
     height: 50px;
@@ -292,7 +295,7 @@ a
     border-radius: 50%;
     color: #ff79da;
     background: linear-gradient(352deg,black,#170222f2);
-    animation: l1 4000ms 220ms cubic-bezier(0,0.44,0.06,1.08) both infinite;
+    animation: l1 3000ms 220ms cubic-bezier(0,0.44,0.06,1.08) both infinite;
 
 } 
 .l2{
@@ -307,7 +310,7 @@ a
     border-radius: 50%;
     color: blueviolet;
     background: linear-gradient(270deg,#3b1c48,#000000fa);
-    animation: l2 4000ms 210ms ease-out both infinite;
+    animation: l2 3000ms 210ms ease-out both infinite;
 }
 .l3{
     width: 80px;
@@ -320,7 +323,7 @@ a
     border-radius: 50%;
     color: #9356d6;
     background:linear-gradient(342deg,#2e1f2ef2,#000000);
-    animation: l3 4000ms 200ms cubic-bezier(0.39,0.58,0.57,1) infinite;
+    animation: l3 3000ms 200ms cubic-bezier(0.39,0.58,0.57,1) both infinite;
 } 
 @keyframes l1 {
     from {
@@ -328,6 +331,7 @@ a
     }
     to {
         transform: translateX(2) scale(1) ;
+        overflow: hidden;
     }
 }
 @keyframes l2 {
@@ -430,7 +434,7 @@ a
         background-color: whitesmoke;
         border: 3px dashed whitesmoke;
         border-radius: 100px;
-        box-shadow: 0 6px 20px #c83bff;
+        box-shadow: 0 6px 20px darkgray;
     }
     .choix,.composition,.surplace{
         margin-left: 10px;
