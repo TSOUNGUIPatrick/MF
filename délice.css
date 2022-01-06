@@ -30,14 +30,11 @@ body,footer
     margin-bottom: 20px;
     position: relative;
 }
-body /* image de fond*/
-{
-    background: url("images/restaurants/délice.png") no-repeat 0px 80px;
-    background-size: contain;
-}
 .photo
 {
+    background: url("images/restaurants/délice.png") no-repeat ;
     height: 200px;
+    background-size: cover;
 }
 
 .fleche a{
