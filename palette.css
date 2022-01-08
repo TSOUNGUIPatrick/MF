@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body,footer
@@ -8,7 +9,7 @@ body,footer
 }
 .photo
 {
-    height: 200px;
+    height: 300px;
     background: url("images/restaurants/palette.png");
     background-size: cover;
 }
@@ -96,25 +97,25 @@ h1{
     box-shadow: 3px 2px 3px #90a4ae;
     border-radius: 15px;
     margin-bottom: 30px;
-    animation: coulisse 2500ms 150ms ease both; 
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    width: 100%;
 }
 
 /*anim des menus*/
 
 .frica,.filb,.paris
 {
-    animation: coulisse 2500ms 1ms ease both;
+    animation: coulisse 3000ms 300ms ease both;
 }
 .foie,.parmen,.maca
 {
-    animation: coulisse 2500ms 300ms ease both
+    animation: coulisse 3200ms 400ms ease both
 }
 .oeuf,.filt,.mousse
 {
-    animation: coulisse 2500ms 350ms ease both;
+    animation: coulisse 3400ms 500ms ease both;
 }
 
 @keyframes coulisse 
@@ -122,23 +123,35 @@ h1{
     0%
     {
         transform: translateX(-999px);
-        opacity: 0.2;
+        opacity: 0.1;
     }
     100%
     {
-        transform:translateX(1);
         opacity: 1;
     }
 }
 .frica:hover,.foie:hover,.oeuf:hover,.filb:hover,.parmen:hover,.filt:hover,.paris:hover,.maca:hover,.mousse:hover
 {
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .inté
 {
     display: flex;
     justify-content: space-between;
+}
+                   /* effet ellipsis*/
+.inté p 
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.frica:hover p,.foie:hover p,.oeuf:hover p,.filb:hover p,.parmen:hover p,.filt:hover p,.paris:hover p,.maca:hover p,.mousse:hover p
+{
+    width: calc(100% - 180px);
+
 }
 .prix
 {
@@ -165,20 +178,11 @@ h1{
     top: -1px; right: -2px;
     border-left: 1px solid #99E2D0;
     border-radius: 0 10px 10px 0;
-    font-size: x-large;
     opacity: 0;
-    animation: roulade 2s ;
+    font-size: larger;
+    transform: translateX(-50px) rotateY(1turn) ;
 }
-@keyframes roulade 
-{
-    0%{
-        transform: translateX(-999px);
-    }
-    100%{
-        transform: translateX(1);
-    }
-    
-}
+
 
                    /*effet de décalage sur la validation*/
 .frica:hover .valid,.foie:hover .valid,.oeuf:hover .valid,.filb:hover .valid,.parmen:hover .valid,.filt:hover .valid,.paris:hover .valid,.maca:hover .valid,.mousse:hover .valid
@@ -213,7 +217,7 @@ h2
     border: 2px solid #eeeeee;
     border-radius: 30px 30px 0 0;
     background-color:#eeeeee;
-    margin-top: -20px;
+    margin-top: -30px;
 }
 .btn
 {
@@ -270,13 +274,13 @@ h2
     display: inline-block;
     margin-right: 10px;
 }
-.fin a /* liens du footer*/
+.fin a 
 {
     color: white; 
     text-decoration: none;   
 }
 
-/* partie responsive*/
+                   /* partie responsive*/
 
 @media screen and (min-width:600px) 
 {
@@ -291,15 +295,15 @@ h2
     .frica,.foie,.oeuf,.filb,.parmen,.filt,.paris,.maca,.mousse
     {
         display: block;
-        height: 60px;
-        padding: 5px;
+        height: 70px;
+        padding: 15px;
     }
     h2
     {
         width: 100%;
         display: flex;
         justify-content: center;
-        border-bottom: 10px solid lightskyblue;
+        border-bottom: 10px double lightskyblue;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -326,7 +330,7 @@ h2
         width: 50%;
         display: flex;
         justify-content: end;
-        border-bottom: 20px solid lightskyblue;
+        border-bottom: 20px double lightskyblue;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -340,7 +344,15 @@ h2
     }
     .container
     {
-        background-color: none;
+        margin-top: 10px;
+        background-color: antiquewhite;
+        border: 5px solid lightskyblue;
+        border-radius: 100px;
+    }
+    .photo
+    {
+        height: 600px;
+        border-radius: 100px;
     }
     .btn
     {
@@ -348,8 +360,16 @@ h2
     }
     body
     {
-        box-sizing: content-box;
+        box-sizing: border-box;
         margin: 10px;
+        background: linen;
+    }
+    .fin
+    {
+        border-radius: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
     }
     .finish
     {
