@@ -133,7 +133,6 @@ h1{
 .frica:hover,.foie:hover,.oeuf:hover,.filb:hover,.parmen:hover,.filt:hover,.paris:hover,.maca:hover,.mousse:hover
 {
     cursor: pointer;
-    transform: scale(1.05);
 }
 
 .inté
@@ -180,7 +179,6 @@ h1{
     border-radius: 0 10px 10px 0;
     opacity: 0;
     font-size: larger;
-    transform: translateX(-50px) rotateY(1turn) ;
 }
 
 
@@ -315,6 +313,14 @@ h2
     {
         width: 80%;  
     }
+    footer
+    {
+        text-align: center;
+    }
+    .photo
+    {
+        height: 450px;
+    }
 }
 @media screen and (min-width:1024px) 
 {
@@ -364,16 +370,20 @@ h2
         margin: 10px;
         background: linen;
     }
+    footer
+    {
+        margin-top: 10px;
+    }
     .fin
     {
         border-radius: 60px;
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-bottom: 30px;
+        margin-top: 10px;
+        
     }
     .finish
     {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         padding-bottom: 10px;
     }

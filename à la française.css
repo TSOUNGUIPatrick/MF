@@ -1,23 +1,21 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body,footer
 {
     font-family: 'Roboto','Shrikhand',"Arial Black";
 }
+.photo
+{
+    height: 300px;
+    background: url("images/restaurants/à\ la\ française.png");
+    background-size: cover;
+}
 .logo img
 { 
     block-size: 40px;
-}
-body
-{
-  background: url("images/restaurants/à\ la\ française.png") no-repeat 0px 80px;
-  background-size: contain; 
-}
-.photo
-{
-    height: 200px;
 }
 .fleche
 {
@@ -30,6 +28,10 @@ body
     position: absolute;
     left: 10px;
 }
+.fleche a{
+    color: black;
+    cursor: pointer;
+}
 .logo
 {
     display: flex;
@@ -39,14 +41,8 @@ body
     margin-bottom: 20px;
     position: relative;
 }
-.fleche a
-{
-    color: black;
-    cursor: pointer;
-}
 
-h1
-{
+h1{
     height: 50px;
     display: flex;
     justify-content: center;
@@ -58,73 +54,169 @@ h1
 }
 .myioc
 {
+    position: relative;
+    left: 20px;
+}
+.coeur 
+{
     display: flex;
+    width: 50px;
+    height: 40px;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 20px;
 }
-.coeur
+.coeur i
 {
-    display: inline-block;
-    width: 20%;
-    height: 40px;
-    margin-left: 20px;
-    transition: all 200ms ease-in-out;
-}
-.coeur:hover
-{
+    position: absolute;
     cursor: pointer;
-    background: linear-gradient(bottom #9356d6 top #ff79da);
-    transform:  scale(1.1);
 }
-h2{
-    display: block;
-    font-weight: 300;
-    border-bottom: 3px solid lightskyblue;
-    width: fit-content;
-    margin-bottom: 20px;
-    animation: h2 300ms 150ms ease-in;
-}
-@keyframes h2  /* animation des titres du menu*/
+
+.coeur .fas
 {
-    100%{
-        transform: scaleX(1) rotateY(2turn);
-    }
+    opacity:0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(#9356d6,#ff79da);
 }
-.entrées,.plats,.desserts
+.coeur:hover .fas
 {
-    margin-left: 10px;
-    margin-right: 10px;
+    opacity: 1;
+    transition:  opacity 2s;
 }
+
 .tarta,.velou,.soupe,.coqui,.magret,.pigeon,.péta,.fond,.mille
 {
     display: block;
     height: 70px;
-    padding: 5px;
+    padding: 15px;
     background-color: white;
     border: 1px solid #f5f5f5;
-    box-shadow: 3px 2px 3px #bdbdbd ;
+    box-shadow: 3px 2px 3px #90a4ae;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/*anim des menus*/
+
+.tarta,.coqui,.péta
+{
+    animation: coulisse 3000ms 300ms ease both;
+}
+.velou,.magret,.fond
+{
+    animation: coulisse 3200ms 400ms ease both
+}
+.soupe,.pigeon,.mille
+{
+    animation: coulisse 3400ms 500ms ease both;
+}
+
+@keyframes coulisse 
+{
+    0%
+    {
+        transform: translateX(-999px);
+        opacity: 0.1;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
 .tarta:hover,.velou:hover,.soupe:hover,.coqui:hover,.magret:hover,.pigeon:hover,.péta:hover,.fond:hover,.mille:hover
 {
     cursor: pointer;
-    transform: scaleY(1) translateX(-10px);
 }
+
 .inté
 {
     display: flex;
     justify-content: space-between;
 }
+                   /* effet ellipsis*/
+.inté p 
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.tarta:hover p,.velou:hover p,.soupe:hover p,.coqui:hover p,.magret:hover p,.pigeon:hover p,.péta:hover p,.fond:hover p,.mille:hover p
+{
+    width: calc(100% - 180px);
+
+}
 .prix
 {
+    width: 70px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+                   /*effet de décalage sur le prix*/
+
+.tarta:hover .prix,.velou:hover .prix,.soupe:hover .prix,.coqui:hover .prix,.magret:hover .prix,.pigeon:hover .prix,.péta:hover .prix,.fond:hover .prix,.mille:hover .prix
+{ 
+    transform: translateX(-100px);
+}
+.valid
+{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    background-color: #99E2D0;
+    top: -1px; right: -2px;
+    border-left: 1px solid #99E2D0;
+    border-radius: 0 10px 10px 0;
+    opacity: 0;
+    font-size: larger;
+}
+
+                   /*effet de décalage sur la validation*/
+
+.tarta:hover .valid,.velou:hover .valid,.soupe:hover .valid,.coqui:hover .valid,.magret:hover .valid,.pigeon:hover .valid,.péta:hover .valid,.fond:hover .valid,.mille:hover .valid
+{
+    width: 80px;
+    opacity: 1;
+}
+
+h2
+{
     display: block;
-    text-align: end;
+    font-weight: 300;
+    border-bottom: 3px solid lightskyblue;
+    width: 60px;
+    margin-bottom: 20px;
+    animation: h2 2000ms 150ms ease-in;
+}
+
+@keyframes h2  /* animation des titres du menu*/
+{
+    100%{
+        transform: scaleX(1) rotateY(1turn);
+    }
+}
+
+.entrées,.plats,.desserts
+{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .container{
     border: 2px solid #eeeeee;
     border-radius: 30px 30px 0 0;
     background-color:#eeeeee;
+    margin-top: -30px;
 }
 .btn
 {
@@ -135,7 +227,7 @@ h2{
 {
     cursor:pointer;
     transform:scale(1.1);
-    transition: transform 200ms 0ms;
+    transition: transform 20ms 0ms;
 }
 .bouton
 {
@@ -181,8 +273,120 @@ h2{
     display: inline-block;
     margin-right: 10px;
 }
-.fin a /* liens du footer*/
+.fin a 
 {
     color: white; 
     text-decoration: none;   
+}
+
+                   /* partie responsive*/
+
+@media screen and (min-width:600px) 
+{
+    .tarta,.velou,.soupe,.coqui,.magret,.pigeon,.péta,.fond,.mille
+    {
+        display: block;
+        height: 60px;
+    }
+}
+@media screen and (min-width:690px) 
+{
+    .tarta,.velou,.soupe,.coqui,.magret,.pigeon,.péta,.fond,.mille
+    {
+        display: block;
+        height: 70px;
+        padding: 15px;
+    }
+    h2
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 10px double lightskyblue;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1
+    {
+        font-size: xx-large;
+    }
+    .tarta,.velou,.soupe,.coqui,.magret,.pigeon,.péta,.fond,.mille
+    {
+        width: 80%;  
+    }
+    footer
+    {
+        text-align: center;
+    }
+    .photo
+    {
+        height: 450px;
+    }
+}
+@media screen and (min-width:1024px) 
+{
+    .tarta,.velou,.soupe,.coqui,.magret,.pigeon,.péta,.fond,.mille
+    {
+        width: 40%;
+        height: 70px;
+        margin-left: 30px;
+        display: inline-block;
+    }
+    h2
+    {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        border-bottom: 20px double lightskyblue;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1
+    {
+        font-size: xx-large;
+    }
+    .entrées,.plats,.desserts
+    {
+        display: inline;   
+    }
+    .container
+    {
+        margin-top: 10px;
+        background-color: antiquewhite;
+        border: 5px solid lightskyblue;
+        border-radius: 100px;
+    }
+    .photo
+    {
+        height: 600px;
+        border-radius: 100px;
+    }
+    .btn
+    {
+        margin: 50px;
+    }
+    body
+    {
+        box-sizing: border-box;
+        margin: 10px;
+        background: linen;
+    }
+    footer
+    {
+        margin-top: 10px;
+    }
+    .fin
+    {
+        border-radius: 60px;
+        margin-top: 10px;
+        
+    }
+    .finish
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    
 }
