@@ -422,8 +422,8 @@ footer{
     }
     .palette,.note,.délice,.french{
         display:grid;
-        width: 40%;
-        height: 200px;
+        width: 45%;
+        height: 210px;
       }
     #resto img{
           object-fit: cover;
@@ -482,11 +482,11 @@ footer{
         margin-bottom: 50px;
     }
     #resto img{
-        height: 190px;
+        height: 220px;
     }
     .palette,.note,.french,.délice{
         display:grid;
-        width: 40%;
-        height: 250px;
+        width: 45%;
+        height: 290px;
     }
 }
