@@ -122,8 +122,8 @@ h1{
 {
     0%
     {
-        transform: translateX(-999px);
-        opacity: 0.1;
+        transform: translateY(-999px);
+        opacity: 0;
     }
     100%
     {
@@ -161,6 +161,7 @@ h1{
 }
 
                    /*effet de décalage sur le prix*/
+                   
 .frica:hover .prix, .foie:hover .prix,.oeuf:hover .prix,.filb:hover .prix,.parmen:hover .prix,.filt:hover .prix,.paris:hover .prix,.maca:hover .prix,.mousse:hover .prix
 { 
     transform: translateX(-100px);
@@ -181,8 +182,28 @@ h1{
     font-size: larger;
 }
 
+                    /*animation validation*/      
+
+.frica:hover i,.foie:hover i,.oeuf:hover i,.filb:hover i,.parmen:hover i,.filt:hover i,.paris:hover i,.maca:hover i,.mousse:hover i
+{
+    animation: roulade 1000ms 100ms ease both;
+}
+@keyframes roulade
+{
+    0%
+    {
+        transform:translateX(50px) rotate(1turn);
+        opacity: 0.1;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+                  
 
                    /*effet de décalage sur la validation*/
+
 .frica:hover .valid,.foie:hover .valid,.oeuf:hover .valid,.filb:hover .valid,.parmen:hover .valid,.filt:hover .valid,.paris:hover .valid,.maca:hover .valid,.mousse:hover .valid
 {
     width: 80px;
@@ -222,12 +243,6 @@ h2
     display: flex;
     justify-content: center;
 }
-.btn:hover
-{
-    cursor:pointer;
-    transform:scale(1.1);
-    transition: transform 20ms 0ms;
-}
 .bouton
 {
     width: 30%;
@@ -248,6 +263,14 @@ h2
 {
     text-decoration: none;
     color: white;
+}
+.bouton:hover
+{
+    cursor:pointer;
+    transform:scale(1.1);
+    transition: transform 20ms;
+    background: linear-gradient(#9356d673,#ff79da);
+    box-shadow: 0 4px 8px 2px #363232fc;
 }
 .final
 {

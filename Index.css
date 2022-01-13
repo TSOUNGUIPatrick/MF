@@ -83,6 +83,8 @@ body,footer
 {
     transform: scale(1.15);
     cursor: pointer;
+    background: linear-gradient(#9356d673,#ff79da);
+    box-shadow: 0 4px 8px 2px #363232fc;
 }
 .explolien
 {
