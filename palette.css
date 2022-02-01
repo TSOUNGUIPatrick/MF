@@ -107,7 +107,7 @@ h1{
 
 .frica,.filb,.paris
 {
-    animation: coulisse 3000ms 300ms ease both;
+    animation: coulisse 3000ms 200ms ease both;
 }
 .foie,.parmen,.maca
 {
@@ -115,14 +115,14 @@ h1{
 }
 .oeuf,.filt,.mousse
 {
-    animation: coulisse 3400ms 500ms ease both;
+    animation: coulisse 3400ms 600ms ease both;
 }
 
 @keyframes coulisse 
 {
     0%
     {
-        transform: translateY(50px);
+        transform: translateY(-999px);
         opacity: 0;
     }
     100%
@@ -208,7 +208,7 @@ h1{
 {
     width: 80px;
     opacity: 1;
-    animation: decal 1000ms 100ms ease both;
+    animation: decal 900ms 100ms ease both;
 }
 @keyframes decal
 {
@@ -218,7 +218,6 @@ h1{
     100%{
         width: 100px;
     }
-
 }
 
 h2
