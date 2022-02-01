@@ -122,7 +122,7 @@ h1{
 {
     0%
     {
-        transform: translateY(-999px);
+        transform: translateY(50px);
         opacity: 0;
     }
     100%
@@ -208,6 +208,17 @@ h1{
 {
     width: 80px;
     opacity: 1;
+    animation: decal 1000ms 100ms ease both;
+}
+@keyframes decal
+{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100px;
+    }
+
 }
 
 h2
