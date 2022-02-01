@@ -13,7 +13,7 @@ body,footer
     display: flex;
     justify-content: center;
     block-size: 60px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 .présentation
 {
@@ -114,10 +114,12 @@ body,footer
 }
 .choix:hover,.composition:hover,.surplace:hover 
 {
-    transform: scale(1.2);
     cursor: pointer;
     box-shadow: 0px 4px 8px 2px grey;
     transition: all 10ms 0s ease-in-out;
+}
+.choix:hover i,.composition:hover i,.surplace:hover i
+{
     color:#9356d6;
 }
 .notif  /* points de côté*/
