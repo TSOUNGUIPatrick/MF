@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,footer
+{
+    font-family: 'Roboto','Shrikhand',"Arial Black";
+}
+.photo
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.logo img
+{ 
+    block-size: 40px;
+}
+.fleche
+{
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:xx-large;
+    position: absolute;
+    left: 10px;
+}
+.fleche a{
+    color: black;
+    cursor: pointer;
+}
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: x-large;
+    font-family: 'Shrikhand';
+    margin: 30px;
+}
+.myioc
+{
+    position: relative;
+    left: 20px;
+}
+.coeur 
+{
+    display: flex;
+    width: 50px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+}
+.coeur i
+{
+    position: absolute;
+    cursor: pointer;
+}
+
+.coeur .fas
+{
+    opacity:0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(#9356d6,#ff79da);
+}
+.coeur:hover .fas
+{
+    opacity: 1;
+    transition:  opacity 2s;
+}
+
+.entrée1,.entrée2,.entrée3,.entrée4,.plat1,.plat2,.plat3,.dessert1,.dessert2,.dessert3
+{
+    display: block;
+    height: 70px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #f5f5f5;
+    box-shadow: 3px 2px 3px #90a4ae;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/*animation des menus*/
+
+.entrée1,.plat1,.dessert1, .entrée4
+{
+    animation: coulisse 3000ms 300ms ease both;
+}
+.entrée2,.plat2,.dessert2
+{
+    animation: coulisse 3200ms 400ms ease both
+}
+.entrée3,.plat3,.dessert3
+{
+    animation: coulisse 3400ms 500ms ease both;
+}
+
+@keyframes coulisse 
+{
+    0%
+    {
+        transform: translateY(-999px);
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.entrée1:hover,.entrée2:hover,.entrée3:hover,.entrée4:hover,.plat1:hover,.plat2:hover,.plat3:hover,.dessert1:hover,.dessert2:hover,.dessert3:hover
+{
+    cursor: pointer;
+}
+
+.inté
+{
+    display: flex;
+    justify-content: space-between;
+}
+                   /* effet ellipsis*/
+.inté p 
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.entrée1:hover p,.entrée2:hover p,.entrée3:hover p,.entrée4:hover p,.plat1:hover p,.plat2:hover p,.plat3:hover p,.dessert1:hover p,.dessert2:hover p,.dessert3:hover p
+{
+    width: calc(100% - 180px);
+
+}
+.prix
+{
+    width: 70px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+                   /*effet de décalage sur le prix*/
+
+.entrée1:hover .prix,.entrée2:hover .prix,.entrée3:hover .prix,.entrée4:hover .prix,.plat1:hover .prix,.plat2:hover .prix,.plat3:hover .prix,.dessert1:hover .prix,.dessert2:hover .prix,.dessert3:hover .prix
+{ 
+    transform: translateX(-100px);
+}
+.valid
+{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    background-color: #99E2D0;
+    top: -1px; right: -2px;
+    border-left: 1px solid #99E2D0;
+    border-radius: 0 10px 10px 0;
+    opacity: 0;
+    font-size: larger;
+}
+
+                    /*animation validation*/
+
+.entrée1:hover i,.entrée2:hover i,.entrée3:hover i,.entrée4:hover i,.plat1:hover i,.plat2:hover i,.plat3:hover i,.dessert1:hover i,.dessert2:hover i,.dessert3:hover i
+{
+    animation: roulade 1000ms 100ms ease both;
+}
+@keyframes roulade
+{
+    0%
+    {
+        transform:translateX(50px) rotate(1turn);
+        opacity: 0.1;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+                   /*effet de décalage sur la validation*/
+
+.entrée1:hover .valid,.entrée2:hover .valid,.entrée3:hover .valid,.entrée4:hover .valid,.plat1:hover .valid,.plat2:hover .valid,.plat3:hover .valid,.dessert1:hover .valid,.dessert2:hover .valid,.dessert3:hover .valid
+{
+    width: 80px;
+    opacity: 1;
+}
+
+h2
+{
+    display: block;
+    font-weight: 300;
+    border-bottom: 3px solid lightskyblue;
+    width: 60px;
+    margin-bottom: 20px;
+    animation: h2 2000ms 150ms ease-in;
+}
+
+@keyframes h2  /* animation des titres du menu*/
+{
+    100%{
+        transform: scaleX(1) rotateY(1turn);
+    }
+}
+
+.entrées,.plats,.desserts
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.container{
+    border: 2px solid #eeeeee;
+    border-radius: 30px 30px 0 0;
+    background-color:#eeeeee;
+    margin-top: -30px;
+}
+.btn
+{
+    display: flex;
+    justify-content: center;
+}
+.bouton
+{
+    width: 30%;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    z-index: 1;
+    background: linear-gradient(#9356d6,#ff79da);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b39ddb;
+    border-radius: 20px;
+    box-shadow: 0px 6px 5px #90a4ae;
+}
+.bouton:hover
+{
+    cursor:pointer;
+    transform:scale(1.1);
+    transition: transform 20ms;
+    background: linear-gradient(#9356d673,#ff79da);
+    box-shadow: 0 4px 8px 2px #363232fc;
+}
+.bouton a
+{
+    text-decoration: none;
+    color: white;
+}
+.final
+{
+    font-family:'Shrikhand',Impact,Arial;
+    font-size: 1.2em;
+}
+.fin
+{
+    font-family:'Roboto', impact,Arial;
+    display: block;
+    padding-left: 20px;
+    color:white;
+    background-color: #3c3a3a;
+    border: 2px solid #3c3a3a;
+}
+.fin p
+{
+    margin: 15px;
+}
+.fin i
+{ 
+    display: inline-block;
+    margin-right: 10px;
+}
+.fin a 
+{
+    color: white; 
+    text-decoration: none;   
+}
+
+                   /* partie responsive*/
+
+@media screen and (min-width:600px) 
+{
+    .entrée1,.entrée2,.entrée3,.entrée4,.plat1,.plat2,.plat3,.dessert1,.dessert2,.dessert3
+    {
+        display: block;
+        height: 60px;
+    }
+    .photo
+    {
+        height: 350px;
+    }
+}
+@media screen and (min-width:690px) 
+{
+    .entrée1,.entrée2,.entrée3,.entrée4,.plat1,.plat2,.plat3,.dessert1,.dessert2,.dessert3
+    {
+        display: block;
+        height: 70px;
+        padding: 15px;
+    }
+    h2
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 10px double lightskyblue;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1
+    {
+        font-size: xx-large;
+    }
+    .entrée1,.entrée2,.entrée3,.entrée4,.plat1,.plat2,.plat3,.dessert1,.dessert2,.dessert3
+    {
+        width: 80%;  
+    }
+    footer
+    {
+        text-align: center;
+    }
+    .photo
+    {
+        height: 450px;
+    }
+}
+@media screen and (min-width:1024px) 
+{
+    .entrée1,.entrée2,.entrée3,.entrée4,.plat1,.plat2,.plat3,.dessert1,.dessert2,.dessert3
+    {
+        width: 40%;
+        height: 70px;
+        margin-left: 30px;
+        display: inline-block;
+    }
+    h2
+    {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        border-bottom: 20px double lightskyblue;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1
+    {
+        font-size: xx-large;
+    }
+    .entrées,.plats,.desserts
+    {
+        display: inline;   
+    }
+    .container
+    {
+        margin-top: 10px;
+        background-color: antiquewhite;
+        border: 5px solid lightskyblue;
+        border-radius: 100px;
+    }
+    .photo
+    {
+        height: 600px;
+        border-radius: 100px;
+    }
+    .btn
+    {
+        margin: 50px;
+    }
+    body
+    {
+        box-sizing: border-box;
+        margin: 10px;
+        background: linen;
+    }
+    footer
+    {
+        margin-top: 10px;
+    }
+    .fin
+    {
+        border-radius: 60px;
+        margin-top: 10px;
+        
+    }
+    .finish
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    
+}
